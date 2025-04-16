@@ -1,0 +1,22 @@
+@use 'variables';
+
+.footer {
+    padding: 16px 0;
+    background-color: black;
+
+    .container {
+        text-align: center;
+    }
+
+    &__text {
+        @each $property, $value in variables.$description {
+            #{$property}: $value;
+        }
+
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,9 @@
+@use '../variables.scss';
+
+.span {
+        color: variables.$blue;
+
+        &#verde {
+                color: #25d366;
+        }
+}

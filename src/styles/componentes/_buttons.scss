@@ -1,0 +1,23 @@
+@use '../variables.scss';
+
+.button {
+    display: inline-block;
+    padding: 16px;
+    margin: 16px 0;
+    font-size: 16px;
+    background-color: variables.$blue;
+    color: variables.$textColor1;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 32px;
+
+    transition: all ease .3s;
+    &:hover {
+        background-color: variables.$blueLight;
+        transform: scale(1.05);
+    }
+
+    &__margin {
+        margin: 0 4px;
+    }
+}

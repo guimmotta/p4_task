@@ -1,0 +1,45 @@
+@use 'variables';
+
+.hero {
+    padding: 25vh 0;
+    background-image: url(../images/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        height: 100px;
+        background-color: variables.$textColor1;
+        border-radius: 50px;
+    }
+
+    &__title {
+        @each $property, $value in variables.$title {
+            #{$property}: $value;
+
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__logo {
+            height: 50px;
+        }
+
+        &__title {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 22px;
+            margin: 24px 0;
+        }
+    }
+}

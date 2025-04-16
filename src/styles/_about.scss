@@ -1,0 +1,88 @@
+@use 'variables';
+
+.about {
+    padding: 64px 0;
+    background-color: variables.$textColor1;
+
+
+    .container {
+        display: flex;
+        gap: 40;
+        flex-direction: row-reverse;
+    }
+
+    &__image {
+        max-height: 280px;
+        border-radius: 20px;
+
+    }
+
+    &__detail {
+
+        &__title {
+            @each $property, $value in variables.$title {
+                #{$property}: $value;
+                margin: 0;
+                color: variables.$blue;
+
+                .span {
+                    color: variables.$pink;
+                }
+            }
+        }
+
+        &__description {
+            @each $property, $value in variables.$description {
+                #{$property}: $value;
+                font-size: 14px;
+                line-height: 16px;
+                margin: 0;
+                color: variables.$blue;
+            }
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    @media (max-width:640px) {
+        padding: 40px 0;
+
+        .container {
+            display: block;
+        }
+
+        &__detail {
+
+            &__title {
+                font-size: 22px;
+                line-height: 24px;
+                margin: 24px 0;
+                padding: 16px 0;
+            }
+
+            &__description {
+                padding: 16px 0;
+            }
+        }
+
+        .button {
+            padding: 8px;
+        }
+
+        &__image {
+            display: none;
+            width: 100%;
+            
+        }
+
+        &__detail {
+        margin-right: 0;
+        }
+
+        .hide {
+            display: block;
+        }
+    }
+}

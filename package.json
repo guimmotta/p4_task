@@ -1,0 +1,20 @@
+{
+  "name": "paloma_landing_page",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@parcel/transformer-sass": "^2.14.1",
+    "aos": "^2.3.4",
+    "parcel": "^2.14.1",
+    "sharp": "^0.33.5",
+    "swiper": "^11.2.6"
+  }
+}
